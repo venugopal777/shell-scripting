@@ -18,3 +18,4 @@ echo Hello World
 
 echo -e "\e[31mText in Red Color"
 echo "One more line"
+
