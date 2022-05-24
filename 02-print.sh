@@ -16,6 +16,6 @@ echo Hello World
 # "\e[COLm -> this is to enable the color, COL is one of the  color code
 # "\e[0m -> this is to disable the color
 
-echo -e "\e[31mText in Red Color"
+echo -e "\e[31mText in Red Color\e[0m"
 echo "One more line"
 
