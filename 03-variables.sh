@@ -9,6 +9,5 @@ echo $b Training
 
 # {} are needed if varaibles is combined with other words without spaces
 
-DATE=2022-03-10
+DATE=2022-05-25
 echo Today date is $DATE
-
