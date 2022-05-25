@@ -27,3 +27,5 @@ echo Third Value of Array = ${c[2]}
 echo All Values of Array = ${#c[*]}
 
 
+
+
