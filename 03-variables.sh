@@ -11,3 +11,6 @@ echo $b Training
 
 DATE=2022-05-25
 echo Today date is $DATE
+
+DATE=(date +%F)
+echo Today date is $DATE
