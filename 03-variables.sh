@@ -1,10 +1,12 @@
 #!/bin/bash
 
-a=100
+a=200
 b=devops
 
 echo ${a}times
 echo $b
+
+
 
 
 
