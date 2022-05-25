@@ -20,3 +20,10 @@ y=20
 ADD=$(($x+$y))
 echo Add = $ADD
 
+## Arrays
+c=(10 20 samll large)
+echo First Value of Array = ${c[0]}
+echo Third Value of Array = ${c[2]}
+echo All Values of Array = ${#c[*]}
+
+
