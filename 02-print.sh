@@ -17,10 +17,11 @@ echo Hello World
 # "\e[0m -> this is to disable the color
 
 echo -e "\e[31mText in Red Color\e[0m"
-echo -e "\e[33mGopal in Yellow Color\e[0m"
+echo -e "\e[33mGopal\e[0m in Yellow Color"
 echo "One more line"
 
 echo -e "Line1\n\nline2"
 
 echo -e "Word1\t\tWord2"
+
 
