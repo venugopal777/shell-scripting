@@ -23,7 +23,7 @@ if [ "$a" == "abc" ]; then
 fi
 
 if [ "$b" != "abc" ]; then
-  echo "Both are equal"
+  echo "Both are not equal"
 fi
 
 if [ -z "$b" ]; then
