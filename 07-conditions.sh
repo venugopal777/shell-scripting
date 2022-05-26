@@ -18,15 +18,14 @@
 # 3. File Tests
 
 a="abc"
-if [ "$a" == "abc"]; then
+if [ "$a" == "abc" ]; then
   echo Both are equal
 fi
 
-if [ "$a" != "abc"]; then
+if [ "$a" != "abc" ]; then
   echo "Both are equal"
 fi
 
 if [ -z "$b" ]; then
   echo b variable is empty
 fi
-
