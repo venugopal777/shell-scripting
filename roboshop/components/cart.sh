@@ -1,4 +1,2 @@
-#!/bin/bash
-
-bash components/$1.sh
+echo Cart Component
 
