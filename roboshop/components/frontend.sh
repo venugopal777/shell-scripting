@@ -1,5 +1,11 @@
 #!/bin/bash
 
+USER ID=$(id -u)
+if [ "$USER_ID" -ne 0 ]; then
+  echo You should run your script as sudo or root user
+  exit
+fi
+
 echo -e "\e[36m Installing Nginx \e[0m"
 yum install nginx -y
 
