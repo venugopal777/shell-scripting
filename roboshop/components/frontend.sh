@@ -38,7 +38,7 @@ unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* .
 StatCheck $?
 
 
-print "Update RoboSohp Configuration"
+Print "Update RoboSohp Configuration"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 StatCheck $?
 
