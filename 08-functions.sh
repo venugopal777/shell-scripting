@@ -22,12 +22,22 @@ Print_Message() {
   b=30
 }
 
+STAT() {
+  echo Hello
+  return 1
+  echo Bye
+}
+
 ## Main Program
 a=10
 Print_Message DevOps
 
 echo "First Argument in Main Script = $1"
 echo "value of b = $b"
+STAT
+echo Exit status of function STAT = $?
 
 ## Note, Function has always been declared first and then you call function later in the code
 ## Function will have its own set of special variables
+## Variable declared in main program can be overwritten in function and vice versa.
+## Function is a command , Function have exit status well
