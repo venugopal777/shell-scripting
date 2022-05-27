@@ -25,7 +25,7 @@ StatCheck $?
 
 echo -e "\e[36m ICleanup Old Nginx Content and Extract new downloaded archive \e[0m"
 rm -rf /usr/share/nginx/html/*
-cd /usr/share/nginx/html
+cd /usr/share/nginx/html/
 unzip /tmp/frontend.zip
 mv frontend-main/* .
 mv static/* .
@@ -37,5 +37,4 @@ echo -e "\e[36m Starting Nginx \e[0m"
 systemctl restart nginx
 StatCheck $?
 systemctl enable nginx
-
 
