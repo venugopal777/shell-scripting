@@ -41,7 +41,7 @@ cd /home/${APP_USER}/ &>>${LOG_FILE} && unzip -o /tmp/catalogue.zip &>>${LOG_FIL
 StatCheck $?
 
 Print "Fix App User Permissions"
-chown _R ${APP_USER}:${APP_USER} /home/${APP_USER}
+chown -R ${APP_USER}:${APP_USER} /home/${APP_USER}
 StatCheck $?
 
 
