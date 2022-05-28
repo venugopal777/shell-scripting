@@ -30,11 +30,7 @@ Print "Install Mongodb"
 yum install -y mongodb-org &>>$LOG_FILE
 StatCheck $?
 
-
-Config file: `/etc/mongod.conf`
-
 Print "Start MongoDB"
 systemctl enable mongod &>>$LOG_FILE && systemctl restart mongod &>>$LOG_FILE
 StatCheck $?
-
 
