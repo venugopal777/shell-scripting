@@ -1,6 +1,3 @@
-#!/bin/bash
-
-
 StatCheck() {
   if [ $? -eq 0 ]; then
     echo -e "\e[32mSUCCESS\e[0m"
@@ -22,3 +19,6 @@ if [ "$USER_ID" -ne 0 ]; then
 fi
 LOG_FILE=/tmp/roboshop.log
 rm -f $LOG_FILE
+
+APP_USER=roboshop
+

@@ -9,3 +9,4 @@ mongodb:
 
 catalogue:
 	bash components/catalogue.sh
+
