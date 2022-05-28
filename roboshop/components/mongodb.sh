@@ -22,7 +22,7 @@ fi
 LOG_FILE=/tmp/roboshop.log
 rm -f $LOG_FILE
 
-print "Setup YUM Repos"
+Print "Setup YUM Repos"
 curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/roboshop-devops-project/mongodb/main/mongo.repo &>>$LOG_FILE
 StatCheck $?
 
@@ -33,5 +33,4 @@ StatCheck $?
 Print "Start MongoDB"
 systemctl enable mongod &>>$LOG_FILE && systemctl restart mongod &>>$LOG_FILE
 StatCheck $?
-
 
