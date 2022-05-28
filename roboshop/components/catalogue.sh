@@ -15,7 +15,7 @@ source components/common.sh
 # systemctl enable catalogue
 
 Print "Configure Yum repos"
-curl -f$SL curl -sL https://rpm.nodesource.com/setup_lts.x | bash - &>>${LOG FILE}
+curl -f$SL curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${LOG FILE}
 StatCheck $?
 
 Print "Install NodeJS"
