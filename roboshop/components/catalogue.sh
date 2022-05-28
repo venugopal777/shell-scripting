@@ -37,7 +37,7 @@ rm -rf /home/${APP_USER}/catalogue &>>${LOG_FILE}
 StatCheck $?
 
 Print "Extract App Content"
-cd /home/${APP_USER}/ &>>${LOG_FILE} && unzip -o /tmp/catalogue.zip &>>${LOG FILE} && mv catalogue-main catalogue &>>${LOG_FILE}
+cd /home/${APP_USER}/ &>>${LOG_FILE} && unzip -o /tmp/catalogue.zip &>>${LOG_FILE} && mv catalogue-main catalogue &>>${LOG_FILE}
 StatCheck $?
 
 Print "Fix App User Permissions"
