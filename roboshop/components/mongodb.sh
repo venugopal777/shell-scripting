@@ -34,3 +34,4 @@ Print "Start MongoDB"
 systemctl enable mongod &>>$LOG_FILE && systemctl restart mongod &>>$LOG_FILE
 StatCheck $?
 
+
