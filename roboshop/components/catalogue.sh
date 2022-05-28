@@ -29,8 +29,7 @@ if [ $? -ne 0 ]; then
 fi
 
 Print "Download App Component"
-curl -f -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
-&>>${LOG FILE}
+curl -f -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
 StatCheck $?
 
 Print "CleanUp Old Content"
