@@ -68,5 +68,3 @@ systemctl enable ${COMPONENT} &>>${LOG_FILE}
 StatCheck $?
 
 }
-
-
