@@ -26,6 +26,7 @@ Print "Extract Schema"
 cd /tmp && unzip -o mongodb.zip &>>$LOG_FILE
 StatCheck $?
 
-Print "Loas Schema"
+Print "Load Schema"
 cd mongodb-main && mongo < catalogue.js &>>$LOG_FILE && mongo < users.js &>>$LOG_FILE
 StatCheck $?
+
