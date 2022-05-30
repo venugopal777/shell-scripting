@@ -1,9 +1,6 @@
 frontend:
 	bash components/frontend.sh
 
-cart:
-	bash components/cart.sh
-
 mongodb:
 	bash components/mongodb.sh
 
@@ -16,4 +13,6 @@ redis:
 user:
 	bash components/user.sh
 
+cart:
+	bash components/cart.sh
 
