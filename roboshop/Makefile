@@ -16,4 +16,3 @@ redis:
 user:
 	bash components/user.sh
 
-
