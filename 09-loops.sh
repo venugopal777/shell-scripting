@@ -9,4 +9,7 @@ while [ $i -gt 0 ]; do
   i=$(($i-1))
 done
 
-for
+for fruit in apple banana orange ; do
+  echo Fruit Name = $fruit
+done
+
