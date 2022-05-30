@@ -13,3 +13,4 @@ for fruit in apple bananan orange ; do
   echo Fritu Name = $fruit
 done
 
+
