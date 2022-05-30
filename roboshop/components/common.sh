@@ -47,7 +47,7 @@ rm -rf /home/${APP_USER}/${COMPONENT} &>>${LOG_FILE}
 StatCheck $?
 
 Print "Extract App Component"
-cd /home/${APP_USER} &>>${LOG_FILE} && unzip -o /tmp/${COMPONENT}.zip &>>${LOG_FILE} && mv ${COMPONENT}-main ${COMPONENT} &>>${LOG_FILE}
+cd /home/${APP_USER}/ &>>${LOG_FILE} && unzip -o /tmp/${COMPONENT}.zip &>>${LOG_FILE} && mv ${COMPONENT}-main ${COMPONENT} &>>${LOG_FILE}
 StatCheck $?
 
 Print "Install App Dependencies"
