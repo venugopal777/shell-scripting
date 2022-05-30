@@ -46,6 +46,10 @@ Print "CleanUp Old Content"
 rm -rf /home/${APP_USER}/${COMPONENT} &>>${LOG_FILE}
 StatCheck $?
 
+Print "Extract App Content"
+cd /home/${APP_USER} &>>${LOG_FILE} && unzip -o /tmp/${COMPONENT}.zip &>>${LOG_FILE} && mv ${COMPONENT}-main ${COMPONENT} &>>${LOG_FILE}
+StatCheck $?
+
 Print "Install App Dependencies"
 cd /home/${APP_USER}/${COMPONENT} &>>${LOG_FILE} && npm install &>>${LOG_FILE}
 StatCheck $?
