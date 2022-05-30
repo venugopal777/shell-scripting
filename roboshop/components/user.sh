@@ -2,7 +2,7 @@
 
 source components/common.sh
 COMPONENT=user
-## Functiom
+## Function
 NODEJS
 
 
