@@ -25,7 +25,7 @@ APP_USER=roboshop
 NODEJS() {
 
 Print "Configure Yum repos"
-curl -fsSL curl -sL https://rpm.nodesource.com/setup_lts.x | bash - &>>${LOG_FILE}
+curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash - &>>${LOG_FILE}
 StatCheck $?
 
 Print "Install NodeJS"
