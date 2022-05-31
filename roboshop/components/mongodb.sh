@@ -11,7 +11,7 @@ yum install -y mongodb-org &>>$LOG_FILE
 StatCheck $?
 
 Print "Upadte MongoDB Listen Address"
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+sed -i -e "s/127.0.0.1/0.0.0.0/" /etc/mongod.conf
 StatCheck $?
 
 Print "Start MongoDB"
@@ -27,11 +27,15 @@ cd /tmp && unzip -o mongodb.zip &>>$LOG_FILE
 StatCheck $?
 
 Print "Load Schema"
-cd mongodb-main
-for schema in catalogue users; do
-  echo "Load $schema Schema"
-  mongo < ${schema}.js &>>$LOG_FILE
-  StatCheck $?
-done
+cd mongodb-main && mongo < catalogur.js &>>$LOG_FILE && mongo < users.js &>>$LOG_FILE
+StatCheck $?
+
+
+
+# for schema in catalogue users; do
+# echo "Load $schema Schema"
+# mongo < ${schema}.js &>>$LOG_FILE
+# StatCheck $?
+# done
 
 
