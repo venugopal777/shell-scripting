@@ -31,11 +31,9 @@ cd mongodb-main && mongo < catalogur.js &>>$LOG_FILE && mongo < users.js &>>$LOG
 StatCheck $?
 
 
-
 # for schema in catalogue users; do
 # echo "Load $schema Schema"
 # mongo < ${schema}.js &>>$LOG_FILE
 # StatCheck $?
 # done
-
 
