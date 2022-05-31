@@ -30,5 +30,6 @@ systemctl restart nginx &>>$LOG_FILE && systemctl enable nginx &>>$LOG_FILE
 StatCheck $?
 
 
+
 # for component in catalogue user cart ; do
   #  echo -e "Updating $component Configuration"

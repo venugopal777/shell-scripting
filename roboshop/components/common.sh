@@ -73,3 +73,4 @@ StatCheck $?
 # -e "s/REDIS_ENDPOINT/redis.roboshop.internal" -e "s/MONGO_ENDPOINT/mongodb.roboshop.internal/" -e "s/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/"
 
 
+
