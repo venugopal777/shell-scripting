@@ -45,3 +45,4 @@ systemctl daemon-reload &>>${LOG_FILE} && systemctl restart catalogue &>>${LOG_F
 systemctl enable catalogue &>>${LOG_FILE}
 StatCheck $?
 
+
