@@ -3,7 +3,7 @@
 source components/common.sh
 
 Print "Configure Yum repos"
-curl -f$SL curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${LOG_FILE}
+curl -fsSL curl -sL https://rpm.nodesource.com/setup_lts.x | bash - &>>${LOG_FILE}
 StatCheck $?
 
 Print "Install NodeJS"
@@ -44,5 +44,4 @@ Print "Restart Catalogue Service"
 systemctl daemon-reload &>>${LOG_FILE} && systemctl restart catalogue &>>${LOG_FILE} &&
 systemctl enable catalogue &>>${LOG_FILE}
 StatCheck $?
-
 
