@@ -13,6 +13,7 @@ StatCheck $?
 id ${APP_USER} &>>${LOG_FILE}
 if [ $? -ne 0 ]; then
   Print "Add Application User"
+  useradd ${APP_USER} &>>${LOG_FILE}
   StatCheck $?
 fi
 
