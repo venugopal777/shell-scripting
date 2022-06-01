@@ -32,17 +32,14 @@ if [ $? -eq 0 ]; then
   StatCheck $?
 fi
 
-# SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
-#
-#To download schema, Use the following command
-#
-#```bash
-## curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
-#```
-#Load the schema for Services.
-#
-#```bash
-## cd /tmp
-## unzip mysql.zip
-## cd mysql-main
-## mysql -u root -pRoboShop@1 <shipping.sql
+Print "Download Schema"
+curl -f -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip" &>>${LOG_FILE}
+StatCheck $?
+
+Print "Extract Schema"
+cd /tmp && unzip -o mysql.zip &>>${LOG_FILE}
+StatCheck $?
+
+Print "Load Schema"
+cd mysql-main && mysql -u root -pRoboShop@1 <shipping.sql &>>${LOG_FILE}
+ StatCheck $?
