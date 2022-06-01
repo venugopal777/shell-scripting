@@ -6,6 +6,7 @@ Print "Configure YUM Repo"
 curl -f -s -L -o /etc/yum.repos.d/mysql.repo https://raw.githubusercontent.com/roboshop-devops-project/mysql/main/mysql.repo &>>{LOG_FILE}
 StatCheck $?
 
+
 Print "Install MySQL"
 yum install mysql-community-server -y &>>{LOG_FILE}
 StatCheck $?
@@ -14,17 +15,14 @@ Print "Start MySQL Service"
 systemctl enable mysqld &>>{LOG_FILE} && systemctl start mysqld &>>{LOG_FILE}
 StatCheck $?
 
+echo "SET PASSWORD FOR 'root'@'localhost' = PASSWORD(RoboShop@1');" >/tmp/rootpass.sql
+
+DEFAULT_ROOT_PASSWORD=$(grep "temporary password" /var/log/mysqld.log | awk '{print $NF}'
+mysql -uroot -p"${DEFAULT_ROOT_PASSWORD}" </tmp/rootpass.sql
 
 
-#1. Now a default root password will be generated and given in the log file.
-#
-#```bash
-## grep temp /var/log/mysqld.log
-#```
-#
-#1. Next, We need to change the default root password in order to start using the database service. Use password `RoboShop@1` or any other as per your choice. Rest of the options you can choose `No`
-#
-#```bash
+
+# SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
 ## mysql_secure_installation
 #```
 #
