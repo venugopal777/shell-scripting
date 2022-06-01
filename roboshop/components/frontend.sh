@@ -34,5 +34,6 @@ Print "Starting Nginx"
 systemctl restart nginx &>>$LOG_FILE && systemctl enable nginx &>>$LOG_FILE
 StatCheck $?
 
+
 # catalogue/s/localhost/catalogue.roboshop.internal/" -e "/user/s/localhost/user.roboshop.internal/" -e "/cart/s/localhost/cart.roboshop.internal/"
 #
