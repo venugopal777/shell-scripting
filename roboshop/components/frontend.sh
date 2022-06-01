@@ -21,12 +21,18 @@ unzip /tmp/frontend.zip &>>$LOG_FILE && mv frontend-main/* . &>>$LOG_FILE && mv 
 StatCheck $?
 
 
-Print "Update RoboSohp Configuration"
+Print "Update RoboShop Configuration"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG_FILE
-sed -i -e "/catalogue/s/localhost/catalogue.roboshop.internal/" -e "/user/s/localhost/user.roboshop.internal/" -e "/cart/s/localhost/cart.roboshop.internal/" /etc/nginx/default.d/roboshop.conf
-StatCheck $?
+for component in catalogue user cart shipping; do
+  echo -e "Updating $component in Configuration"
+  sed -i -e "/${component}/s/localhost/${component}.roboshop.internal/" /etc/nginx/default.d/roboshop.conf
+  StatCheck $?
+done
+
 
 Print "Starting Nginx"
 systemctl restart nginx &>>$LOG_FILE && systemctl enable nginx &>>$LOG_FILE
 StatCheck $?
 
+# catalogue/s/localhost/catalogue.roboshop.internal/" -e "/user/s/localhost/user.roboshop.internal/" -e "/cart/s/localhost/cart.roboshop.internal/"
+#
