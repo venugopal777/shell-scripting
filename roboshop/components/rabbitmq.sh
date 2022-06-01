@@ -18,6 +18,7 @@ Print "Create Application User"
 rabbitmqctl add_user roboshop roboshop123 &>>${LOG_FILE}
 StatCheck $?
 
+
 # curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash
 
 # yum install rabbitmq-server -y
