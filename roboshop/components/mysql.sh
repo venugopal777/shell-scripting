@@ -17,7 +17,7 @@ StatCheck $?
 
 echo "SET PASSWORD FOR 'root'@'localhost' = PASSWORD(RoboShop@1');" >/tmp/rootpass.sql
 
-DEFAULT_ROOT_PASSWORD=$(grep "temporary password" /var/log/mysqld.log | awk '{print $NF}'
+DEFAULT_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}'
 mysql -uroot -p"${DEFAULT_ROOT_PASSWORD}" </tmp/rootpass.sql
 
 
@@ -25,7 +25,6 @@ mysql -uroot -p"${DEFAULT_ROOT_PASSWORD}" </tmp/rootpass.sql
 # SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
 ## mysql_secure_installation
 #```
-#
 #1. You can check the new password working or not using the following command in MySQL
 #
 #First lets connect to MySQL
@@ -33,13 +32,11 @@ mysql -uroot -p"${DEFAULT_ROOT_PASSWORD}" </tmp/rootpass.sql
 #```bash
 ## mysql -uroot -pRoboShop@1
 #```
-#
 #Once after login to MySQL prompt then run this SQL Command.
 #
 #```sql
 #> uninstall plugin validate_password;
 #```
-#
 ### **Setup Needed for Application.**
 #
 #As per the architecture diagram, MySQL is needed by
@@ -53,7 +50,6 @@ mysql -uroot -p"${DEFAULT_ROOT_PASSWORD}" </tmp/rootpass.sql
 #```bash
 ## curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
 #```
-#
 #Load the schema for Services.
 #
 #```bash
@@ -61,6 +57,3 @@ mysql -uroot -p"${DEFAULT_ROOT_PASSWORD}" </tmp/rootpass.sql
 ## unzip mysql.zip
 ## cd mysql-main
 ## mysql -u root -pRoboShop@1 <shipping.sql
-#```
-
-
