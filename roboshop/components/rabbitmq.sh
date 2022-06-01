@@ -11,13 +11,12 @@ yum install https://github.com/rabbitmq/erlang-rpm/releases/download/v23.2.6/erl
 StatCheck $?
 
 Print "Start RabbitMQ Service"
-systemctl enable rabbitmq-server &>>{LOG_FILE} && systemctl start rabbitmq-server &>>{LOG_FILE}
+systemctl enable rabbitmq-server &>>${LOG_FILE} && systemctl start rabbitmq-server &>>${LOG_FILE}
 StatCheck $?
 
 Print "Create Application User"
-rabbitmqctl add_user roboshop roboshop123 &>>{LOG_FILE}
+rabbitmqctl add_user roboshop roboshop123 &>>${LOG_FILE}
 StatCheck $?
-
 
 # curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash
 
