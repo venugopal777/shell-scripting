@@ -6,4 +6,3 @@ COMPONENT=shipping
 MAVEN
 
 
-
