@@ -26,13 +26,11 @@ fi
 
 echo show plugins | mysql -uroot -pRoboShop@1 2>>${LOG_FILE} | grep validate_password
 if [ $? -eq 0 ]; then
-  echo "Uninstall Password Validate Plugin"
+  Print "Uninstall Password Validate Plugin"
   echo "uninstall plugin validate_password;" >/tmp/pass-validate.sql
   mysql --connect-expired-password -uroot -pRoboShop@1 </tmp/pass-validate.sql &>>${LOG_FILE}
   StatCheck $?
 fi
-
-
 
 # SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
 #
