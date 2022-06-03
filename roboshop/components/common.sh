@@ -71,6 +71,8 @@ NODEJS() {
   cd /home/${APP_USER}/${COMPONENT} &>>${LOG_FILE} && npm install &>>${LOG_FILE}
   StatCheck $?
 
+  SERVICE_SETUP
+
 }
 
 MAVEN() {
@@ -103,9 +105,3 @@ PYTHON() {
   SERVICE_SETUP
 
 }
-
-
-
-
-
-
