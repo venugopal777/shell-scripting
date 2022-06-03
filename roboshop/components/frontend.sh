@@ -36,4 +36,3 @@ StatCheck $?
 
 
 # catalogue/s/localhost/catalogue.roboshop.internal/" -e "/user/s/localhost/user.roboshop.internal/" -e "/cart/s/localhost/cart.roboshop.internal/"
-#
