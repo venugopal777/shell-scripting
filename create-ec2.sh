@@ -25,8 +25,8 @@ SGID=$(aws ec2 describe-security-groups --filters Name=group-name,Values=mohit |
 
 if [ "$1" == "all" ]; then
   for component in catalogue
-  COMPONENT=$component
-  create_ec2
+    COMPONENT=$component
+    create_ec2
   done
 else
   create_ec2
